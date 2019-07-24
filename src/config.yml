@@ -11,6 +11,27 @@ Claims:
     PricePerBlock: 0.1     # Volume x PricePerBlock = PlotCost
     BaseCost: 500          # The lowest price for a plot no matter how small.
     MaxPlotsTotal: 3       # Max plots a single player can have overall. Bypass with landclaim.plots.# (landclaim.plotstotal.5 for example)
+LandAssetSystem:
+  Tax:
+    Enabled: true
+    Amount: 1.6            # Percent to tax each [Frequency] unit of time. Tax levied on valuable land
+    Frequency: '1 day'     # with bad upkeep will be worth it to sell, because passive income will be lower than the tax
+  LandValue:
+    Appreciation: 
+      Frequency: '1 day'
+    Depreciation:
+      Something:
+    PassiveIncome:
+      Enabled: true
+      Amount: 1.6          # Percent to award land owner each [Frequency] unit of time.
+      Frequency: '1 day'
+      UpkeepDifficulty: 3       # 1 = very easy, 2 = easy, 3 = medium, 4 = hard, 5 = very hard
+                                # Upkeep is a core aspect of land value and income. A hidden upkeep modifier
+                                # can vary between 0 and 1 and can make a piece of land either more
+                                # worth it to hold on to for passive income or more worth it to sell
+
+    
+    
 GUI:
   Slots: 27
   FillerItem: GLASS_PANE
