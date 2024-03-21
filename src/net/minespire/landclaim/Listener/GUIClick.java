@@ -122,6 +122,7 @@ public class GUIClick implements Listener {
             }
 
             if(ChatColor.stripColor(itemName).equalsIgnoreCase("Back")) guiManager.openClaimInspector(player, regionName, worldName);
+            LandClaim.econ.depositPlayer(player, claim.getClaimCost());
             if(ChatColor.stripColor(itemName).equalsIgnoreCase("Close")) player.closeInventory();
             return;
         }
